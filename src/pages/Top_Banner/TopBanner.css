@@ -1,0 +1,48 @@
+.topbanner-container {
+  background-image: url(../../images/banner.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 500px;
+  width: 100%;
+}
+.banner-info {
+  color: white;
+  font-weight: 800;
+  font-size: 60px;
+  letter-spacing: 11px;
+  margin-top: "10px";
+}
+.bannerBtn-gr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bannerBtn-gr .contuct-btn {
+  display: block;
+  border: 2px solid white;
+  padding: 11px 30px;
+  margin-top: 15px;
+  color: white;
+}
+.bannerBtn-gr .learn-btn {
+  border: 2px solid white;
+  padding: 11px 30px;
+  margin-top: 15px;
+  color: white;
+}
+.contuct-btn:hover {
+  border: 2px solid orange;
+}
+@media (min-width: 300px) and (max-width: 660px) {
+  .banner-info {
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0px;
+    margin-bottom: 15px;
+  }
+  .bannerBtn-gr {
+    display: block;
+  }
+}
