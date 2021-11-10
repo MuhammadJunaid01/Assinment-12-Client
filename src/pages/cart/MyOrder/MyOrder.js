@@ -10,7 +10,7 @@ const MyOrder = () => {
   console.log(user.email);
   useEffect(() => {
     if (user.email) {
-      fetch(`http://localhost:5000/myOrder/${user.email}`)
+      fetch(`https://infinite-waters-60535.herokuapp.com/${user.email}`)
         .then((res) => res.json())
         .then((data) => {
           console.log(data);

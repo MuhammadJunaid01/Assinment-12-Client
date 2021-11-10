@@ -75,7 +75,7 @@ const BuyNow = () => {
 
   const email = user?.email;
   const placeOrder = () => {
-    fetch(`http://localhost:5000/placeOrder`, {
+    fetch(`https://infinite-waters-60535.herokuapp.com/placeOrder`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
