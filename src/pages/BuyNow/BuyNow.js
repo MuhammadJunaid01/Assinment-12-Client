@@ -20,7 +20,7 @@ const BuyNow = () => {
   const [loader, setLoader] = useState(true);
   const [product, setProduct] = useState();
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`http://https://infinite-waters-60535.herokuapp.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);

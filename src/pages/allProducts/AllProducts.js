@@ -14,7 +14,7 @@ const AllProducts = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [loader, setLoader] = useState(true);
   useEffect(() => {
-    fetch("http://localhost:5000/allproducts")
+    fetch("http://https://infinite-waters-60535.herokuapp.com/allproducts")
       .then((res) => res.json())
       .then((data) => setAllProducts(data))
       .catch((err) => () => {
