@@ -22,6 +22,7 @@ const useFirebase = () => {
   const [error, setError] = useState("");
 
   const loginWithGoogle = () => {
+    setLoader(true);
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
@@ -29,35 +30,31 @@ const useFirebase = () => {
         // ...
       })
       .catch((error) => {
-        // Handle Errors here.
-        const errorCode = error.code;
-        setError(errorCode);
         const errorMessage = error.message;
         setError(errorMessage);
-        const email = error.email;
-        setError(email);
       })
       .finally(() => {
         setLoader(false);
       });
   };
   useEffect(() => {
+    setLoader(true);
     onAuthStateChanged(auth, (user) => {
-      if (user) {
+      if (user?.email) {
         setUser(user);
-        // ...
       } else {
-        setUser({});
       }
+      setLoader(false);
     });
-  }, []);
+  }, [auth]);
   const logOut = () => {
     signOut(auth)
       .then(() => {
         alert("You are successfully Logout!  ");
+        setUser({});
       })
       .catch((error) => {
-        // An error happened.
+        setError(error.message);
       });
   };
   const regesterWithEmail = (email, password) => {
@@ -66,12 +63,11 @@ const useFirebase = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        console.log(user);
         setUser(user);
         // ...
       })
       .catch((error) => {
-        const errorCode = error.code;
-        setError(errorCode);
         const errorMessage = error.message;
         setError(errorMessage);
         // ..

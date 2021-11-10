@@ -1,0 +1,11 @@
+.myOrder {
+  position: absolute;
+  top: 200%;
+  /* left: 10px; */
+  right: 30px;
+}
+.myOrder .shoping-cart-icon {
+  font-size: 50px;
+  color: orange;
+  cursor: pointer;
+}

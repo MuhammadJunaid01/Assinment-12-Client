@@ -13,17 +13,55 @@ import Grid from "@mui/material/Grid";
 import CircularProgress from "@mui/material/CircularProgress";
 import Stack from "@mui/material/Stack";
 import Rating from "@mui/material/Rating";
+import Backdrop from "@mui/material/Backdrop";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import TextField from "@mui/material/TextField";
+import useFirebase from "./../../firebase/useFirebase/useFirebase";
+
+const style = {
+  position: "absolute",
+  top: "59%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
 const BuyNow = () => {
+  const [name, setName] = useState("");
+  const [address, setAddress] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const { id } = useParams();
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const { user } = useFirebase();
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const handleAddress = (e) => {
+    setAddress(e.target.value);
+  };
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
+  const handlePhoneNumber = (e) => {
+    setPhoneNumber(e.target.value);
+  };
+  const info = {
+    name: name,
+    address: address,
+    phone: phoneNumber,
+    email: user?.email,
+  };
   const [loader, setLoader] = useState(true);
   const [product, setProduct] = useState();
   useEffect(() => {
     fetch(`https://infinite-waters-60535.herokuapp.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
+        data.status = info;
         setProduct(data);
+        console.log("buy data", data);
       })
       .catch((err) => () => {
         console.log(err);
@@ -32,6 +70,29 @@ const BuyNow = () => {
         setLoader(false);
       });
   }, []);
+
+  // console.log("products", product);
+
+  const email = user?.email;
+  const placeOrder = () => {
+    fetch(`http://localhost:5000/placeOrder`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(info),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          alert("added successfully!");
+          console.log(data);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   console.log("loader", loader);
   return loader ? (
     <Typography style={{ textAlign: "center" }} variant="h3">
@@ -82,23 +143,100 @@ const BuyNow = () => {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary">
+                  <Button onClick={handleOpen} size="small" color="primary">
                     Add To Cart
                   </Button>
                 </CardActions>
               </Card>
             </Grid>
             <Grid item xs={12} md={6} sm={12}>
-              <form onSubmit={handleSubmit(onSubmit)}>
-                <input className="inputfield" {...register("name")} />
-                <input className="inputfield" {...register("address")} />
-                <input
-                  className="inputfield"
-                  type="number"
-                  {...register("number")}
-                />
-                <input type="submit" />
-              </form>
+              <div>
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                >
+                  <Box sx={style}>
+                    <Typography
+                      id="modal-modal-title"
+                      variant="h6"
+                      component="h2"
+                    >
+                      Text in a modal
+                    </Typography>
+                    <form action="">
+                      <input
+                        type="text"
+                        onBlur={handleName}
+                        style={{
+                          width: "100%",
+                          color: "black",
+                          marginBottom: "11px",
+                          padding: "8px 3px",
+                        }}
+                        id="standard-basic"
+                        variant="standard"
+                        placeholder="Enter Your Name:"
+                      />
+
+                      <input
+                        style={{
+                          width: "100%",
+                          color: "black",
+                          marginBottom: "11px",
+                          padding: "8px 3px",
+                        }}
+                        id="standard-basic"
+                        value={user?.email}
+                        variant="standard"
+                      />
+
+                      <input
+                        onBlur={handleAddress}
+                        style={{
+                          width: "100%",
+                          color: "black",
+                          marginBottom: "11px",
+                          padding: "8px 3px",
+                        }}
+                        id="standard-basic"
+                        type="text"
+                        variant="standard"
+                        placeholder="Enter Your address:"
+                      />
+
+                      <input
+                        onBlur={handlePhoneNumber}
+                        style={{
+                          width: "100%",
+                          color: "black",
+                          marginBottom: "11px",
+                          padding: "8px 3px",
+                        }}
+                        id="standard-basic"
+                        type="number"
+                        variant="standard"
+                        placeholder="Enter Your Phone Number:"
+                      />
+                    </form>
+                    <Typography variant="button">
+                      <Button
+                        onClick={placeOrder}
+                        style={{
+                          backgroundColor: "orange",
+                          color: "white",
+                          padding: "4px 20px",
+                        }}
+                        size="small"
+                        color="primary"
+                      >
+                        Place Order
+                      </Button>
+                    </Typography>
+                  </Box>
+                </Modal>
+              </div>
             </Grid>
           </Grid>
         </Box>
