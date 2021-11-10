@@ -10,7 +10,12 @@ import Grid from "@mui/material/Grid";
 import CircularProgress from "@mui/material/CircularProgress";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Rating from "@mui/material/Rating";
+import { Link } from "react-router-dom";
+import Stack from "@mui/material/Stack";
+
 const Products = () => {
+  const [value, setValue] = React.useState(2);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -24,10 +29,13 @@ const Products = () => {
         setLoading(false);
       });
   }, []);
+  const handlepuchaseNow = (id) => {
+    console.log(id);
+  };
   return loading ? (
-    <Box sx={{ display: "flex" }}>
+    <Typography style={{ textAlign: "center" }} variant="h1">
       <CircularProgress />
-    </Box>
+    </Typography>
   ) : (
     <Box className="product-box">
       <Container>
@@ -48,27 +56,46 @@ const Products = () => {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      Lizard
+                      {product?.name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                      {product?.info}
                     </Typography>
-                    <Typography className="searche-btn" variant="button">
-                      Add To Cart
-                      <ShoppingCartIcon className="searche-icon"></ShoppingCartIcon>
-                    </Typography>
+                    <Box className="rating-box">
+                      <Typography variant="h6" color="text.secondary">
+                        Price: ${product?.price}
+                      </Typography>
+                      <Typography variant="p">
+                        <Stack spacing={1}>
+                          <Rating
+                            name="half-rating-read"
+                            defaultValue={product?.rate}
+                            precision={0.5}
+                            readOnly
+                          />
+                        </Stack>
+                      </Typography>
+                    </Box>
+
+                    <Link to={`/buynow/${product._id}`}>
+                      <Typography className="searche-btn" variant="button">
+                        Buy Now
+                        <ShoppingCartIcon className="searche-icon"></ShoppingCartIcon>
+                      </Typography>
+                    </Link>
                   </CardContent>
                 </CardActionArea>
               </Card>
             </Grid>
           ))}
         </Grid>
-        <Button>
-          View More
-          <ArrowRightAltIcon></ArrowRightAltIcon>
-        </Button>
+
+        <Link style={{ textDecoration: "none" }} to="/allproducts">
+          <Button>
+            All Products
+            <ArrowRightAltIcon></ArrowRightAltIcon>
+          </Button>
+        </Link>
       </Container>
     </Box>
   );

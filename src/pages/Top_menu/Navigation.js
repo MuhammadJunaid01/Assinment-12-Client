@@ -9,6 +9,8 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import Menu from "@mui/material/Menu";
 import Logout from "@mui/icons-material/Logout";
 import logo from "../../images/logo.png";
+import { Divider } from "@mui/material";
+import useFirebase from "./../../firebase/useFirebase/useFirebase";
 const Navigation = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -18,6 +20,7 @@ const Navigation = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const { logOut, user } = useFirebase();
   return (
     <Box>
       <MuiNavbar logo={logo}>
@@ -26,10 +29,22 @@ const Navigation = () => {
         <NavItem to="/services">Services</NavItem>
         <NavItem to="/Blog">Blog</NavItem>
         <NavItem to="/contact">Contact</NavItem>
+        <NavItem to="/login">Login</NavItem>
         <Box sx={{ display: "inline" }}>
           <Tooltip title="Account settings">
-            <IconButton size="small" sx={{}}>
-              <Avatar sx={{ padding: "5px" }}>M{/* {user?.photoURL} */}</Avatar>
+            <IconButton onClick={handleClick} size="small" sx={{}}>
+              <Avatar sx={{ padding: "5px" }}>
+                <img
+                  style={{
+                    borderRadius: "50%",
+                    height: "70px",
+                    width: "70px",
+                    marginTop: "15px",
+                  }}
+                  src={user?.photoURL}
+                ></img>
+                {/* {user?.photoURL} */}
+              </Avatar>
             </IconButton>
           </Tooltip>
         </Box>
@@ -67,7 +82,7 @@ const Navigation = () => {
           transformOrigin={{ horizontal: "right", vertical: "top" }}
           anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         >
-          <MenuItem>
+          <MenuItem onClick={logOut}>
             <ListItemIcon>
               <Logout fontSize="small" />
             </ListItemIcon>

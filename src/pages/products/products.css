@@ -24,3 +24,9 @@
 .products-card:hover .searche-btn {
   display: block;
 }
+.rating-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}

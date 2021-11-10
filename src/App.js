@@ -6,6 +6,10 @@ import About from "./pages/about/About";
 import Services from "./pages/services/Services";
 import Contuct from "./pages/contuct/Contuct";
 import TopBanner from "./pages/Top_Banner/TopBanner";
+import BuyNow from "./pages/BuyNow/BuyNow";
+import AllProducts from "./pages/allProducts/AllProducts";
+import Login from "./pages/login/Login";
+import Regester from "./pages/regester/Regester";
 function App() {
   return (
     <div>
@@ -19,8 +23,20 @@ function App() {
           <Route exact path="/about">
             <About></About>
           </Route>
+          <Route exact path="/buynow/:id">
+            <BuyNow></BuyNow>
+          </Route>
           <Route exact path="/services">
             <Services></Services>
+          </Route>
+          <Route exact path="/login">
+            <Login></Login>
+          </Route>
+          <Route exact path="/regester">
+            <Regester></Regester>
+          </Route>
+          <Route exact path="/allproducts">
+            <AllProducts></AllProducts>
           </Route>
           <Route exact path="/contact">
             <Contuct></Contuct>
