@@ -40,7 +40,7 @@ const Review = () => {
       <div className="review-info">
         <h4
           className="review-title"
-          style={{ fontSize: "40px", marginTop: "0px", marginBottom: "0px" }}
+          style={{ fontSize: "20px", marginTop: "0px", marginBottom: "0px" }}
         >
           TESTIMONIALS
         </h4>
@@ -49,7 +49,7 @@ const Review = () => {
       <Box>
         <Carousel>
           {reviews?.map((review, index) => (
-            <div className="review-box">
+            <div key={index} className="review-box">
               <img className="review-img" src={review?.image}></img>
               <h2>{review?.name}</h2>
               <div className="star">

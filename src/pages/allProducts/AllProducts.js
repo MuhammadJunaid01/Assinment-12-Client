@@ -41,7 +41,7 @@ const AllProducts = () => {
         <Box className="allproducts-boxCont" sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             {allProducts?.map((available) => (
-              <Grid key={available?._id} item xs={12} sm={12} md={3}>
+              <Grid key={available?._id} item xs={12} sm={12} md={4}>
                 <Card style={{ height: "440px" }}>
                   <CardActionArea>
                     <CardMedia

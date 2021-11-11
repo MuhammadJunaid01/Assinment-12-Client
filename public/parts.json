@@ -1,0 +1,71 @@
+[
+  {
+    "name": "Generic 165 CC Engine",
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "19000",
+    "rate": 5,
+    "image": "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+  },
+  {
+    "name": "Honda 140 CC Engine",
+    "rate": 4.5,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "17000",
+    "image": "https://images.unsplash.com/photo-1564544466685-29adb82df10c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80"
+  },
+  {
+    "name": "Generic @v2 170 CC Engine",
+    "rate": 4,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "29000",
+    "image": "https://images.unsplash.com/photo-1603010757093-034b42884771?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1148&q=80"
+  },
+  {
+    "name": "Generic @v3 175 CC Engine",
+    "rate": 3.6,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "74000",
+    "country": "Greece",
+    "image": "https://images.unsplash.com/photo-1552656967-7a0991a13906?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+  },
+  {
+    "name": "Honda @v2 160 CC Oil",
+    "rate": 3,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "74000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
+  },
+  {
+    "name": "Yamaha 170 CC Engine",
+    "rate": 3.4,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "55000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
+  },
+  {
+    "name": "Yamaha @v2 180 CC Engine",
+    "rate": 4.3,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "75000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1624880403473-4244deee045a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80"
+  },
+  {
+    "name": "Honda Royal 190 CC Mecanik",
+    "rate": 3,
+    "price": "115000",
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1618783129985-dd97dbe4ad99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+  },
+  {
+    "name": "Honda R15 180 CC Tires",
+    "rate": 4.3,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "155000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1588723071875-2c8c39b51c94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+  }
+]
