@@ -12,7 +12,7 @@ const Parts = () => {
   const [parts, setParts] = useState([]);
   const [loader, setLoader] = useState(true);
   useEffect(() => {
-    fetch("http://https://infinite-waters-60535.herokuapp.com0/parts")
+    fetch("https://infinite-waters-60535.herokuapp.com/parts")
       .then((res) => res.json())
       .then((data) => {
         setParts(data);
