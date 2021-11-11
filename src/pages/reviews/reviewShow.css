@@ -1,0 +1,57 @@
+.review-box {
+  background-image: url(../../images/review-bg.jpg);
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: lighten;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  text-align: center;
+  padding: 30px;
+  color: white;
+}
+.review-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.star .star-rat {
+  display: block;
+  text-align: center;
+}
+.review-info .review-title,
+.whatsay {
+  /* color: black; */
+  background-image: linear-gradient(
+    45deg,
+    #ca4246 16.666%,
+    #e16541 16.666%,
+    #e16541 33.333%,
+    #f18f43 33.333%,
+    #f18f43 50%,
+    #8b9862 50%,
+    #8b9862 66.666%,
+    #476098 66.666%,
+    #476098 83.333%,
+    #a7489b 83.333%
+  );
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+}
+.review-info h1,
+h4:hover {
+  animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+.whatsay {
+  font-size: 50px;
+  margin-top: 0px;
+}
+@media (min-width: 300px) and (max-width: 800px) {
+  .review-box {
+    padding: 0px;
+  }
+}

@@ -51,7 +51,7 @@ const BuyNow = () => {
     name: name,
     address: address,
     phone: phoneNumber,
-    email: user?.email,
+    email: user.email,
   };
   const [loader, setLoader] = useState(true);
   const [product, setProduct] = useState();
@@ -59,7 +59,6 @@ const BuyNow = () => {
     fetch(`https://infinite-waters-60535.herokuapp.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        data.status = info;
         setProduct(data);
         console.log("buy data", data);
       })

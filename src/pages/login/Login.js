@@ -4,17 +4,45 @@ import { useForm } from "react-hook-form";
 import { Box } from "@mui/system";
 import { Container, Typography } from "@mui/material";
 import "./login.css";
-import useFirebase from "./../../firebase/useFirebase/useFirebase";
 import { Link } from "react-router-dom";
+import useAuth from "./../../hooks/useAuth/useAuth";
+import { useHistory, useLocation } from "react-router";
 const Login = () => {
-  const { loginWithGoogle, user, loginWithEmailAndPass } = useFirebase();
+  const {
+    loginWithGoogle,
+    setUser,
+    setLoader,
+    user,
+    setError,
+    loginWithEmailAndPass,
+  } = useAuth();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     loginWithEmailAndPass(data.email, data.password);
     console.log(data);
     reset();
   };
+  const location = useLocation();
+  const history = useHistory();
+  const redirect = location.state?.from || "/home";
   console.log("login user", user);
+  const handleGoogleLogin = () => {
+    loginWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        history.push(redirect);
+
+        // ...
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        setError(errorMessage);
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  };
   return (
     <Container>
       <Box className="loginContainer-box">
@@ -41,7 +69,7 @@ const Login = () => {
         <Typography style={{ marginTop: "20px" }} variant="h5">
           Login Google <br />
           <GoogleIcon
-            onClick={loginWithGoogle}
+            onClick={handleGoogleLogin}
             style={{ cursor: "pointer", color: "#EC5C91", fontSize: "50px" }}
           ></GoogleIcon>
         </Typography>

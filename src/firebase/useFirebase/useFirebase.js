@@ -23,19 +23,7 @@ const useFirebase = () => {
 
   const loginWithGoogle = () => {
     setLoader(true);
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        const user = result.user;
-        setUser(user);
-        // ...
-      })
-      .catch((error) => {
-        const errorMessage = error.message;
-        setError(errorMessage);
-      })
-      .finally(() => {
-        setLoader(false);
-      });
+    return signInWithPopup(auth, googleProvider);
   };
   useEffect(() => {
     setLoader(true);

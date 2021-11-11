@@ -1,0 +1,199 @@
+[
+  {
+    "name": "Yamaha Thunder @v2 Helmet",
+    "rate": 4,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "5000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1551281306-0d52288970ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+  },
+  {
+    "name": "Daraz Helmet",
+    "rate": 5,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "3000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1562687586-2f7f3314f950?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=871&q=80"
+  },
+  {
+    "name": "Hero Helmet",
+    "rate": 4,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "4000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1550165946-6c770414edb8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGhlbG1ldHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+  },
+  {
+    "name": "Hero Rapper Helmet",
+    "rate": 3,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "4000",
+    "country": "United States",
+    "image": "https://wallpapercave.com/wp/wp2463557.jpg"
+  },
+  {
+    "name": "Hero Hot 170 CC",
+    "rate": 4.5,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "114000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1620751473962-7e028d3db635?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+  },
+  {
+    "name": "Hero Zamp 180 CC",
+    "rate": 4.2,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "126000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1620751474563-c806527008de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+  },
+  {
+    "name": "Walton 190 CC",
+    "rate": 3.5,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "180000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1568772585432-0bcd9add44f5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+  },
+  {
+    "name": "Walton Pro 190 CC",
+    "rate": 4,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "180000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+  },
+  {
+    "name": "Walton  140 CC",
+    "rate": 5,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "180000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1530784058407-a602dc957638?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
+  },
+  {
+    "name": "Generic 165 CC",
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "79000",
+    "rate": 5,
+    "image": "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+  },
+  {
+    "name": "Honda 140 CC",
+    "rate": 4.5,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "7000",
+    "image": "https://images.unsplash.com/photo-1481575184241-4754ea78a1bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+  },
+  {
+    "name": "Generic @v2 170 CC",
+    "rate": 4,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "99000",
+    "image": "https://images.unsplash.com/photo-1515777315835-281b94c9589f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=912&q=80"
+  },
+  {
+    "name": "Generic @v3 175 CC",
+    "rate": 3.6,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "74000",
+    "country": "Greece",
+    "image": "https://images.unsplash.com/photo-1515902966800-95fac3b01698?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=873&q=80"
+  },
+  {
+    "name": "Honda @v2 160 CC",
+    "rate": 3,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "74000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1542683088-abb3da334598?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=918&q=80"
+  },
+  {
+    "name": "Yamaha 170 CC",
+    "rate": 3.4,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "55000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1547549082-6bc09f2049ae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=871&q=80"
+  },
+  {
+    "name": "Yamaha @v2 180 CC ",
+    "rate": 4.3,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "75000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1568772585471-4f4169aed2a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+  },
+  {
+    "name": "Honda Royal 190 CC",
+    "rate": 3,
+    "price": "115000",
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1559051992-824a1d4353fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=916&q=80"
+  },
+  {
+    "name": "Honda R15 180 CC",
+    "rate": 4.3,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "155000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+  },
+  {
+    "name": "Honda R15 @v2 190 CC ",
+    "rate": 5,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "175000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1558981033-0f0309284409?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+  },
+  {
+    "name": "Honda PR 200 CC",
+    "rate": 3.3,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "257000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+  },
+  {
+    "name": "Bazaz 150 CC",
+    "rate": 4.3,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "80000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1587971051803-70bf6d4ae977?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80"
+  },
+  {
+    "name": "Bazaz @v2 170 CC",
+    "rate": 5,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "180000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1589560552200-67fbddd531f0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1528&q=80"
+  },
+  {
+    "name": "Yamaha @v2 170 CC",
+    "rate": 4.8,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "180000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1554288270-2b57ac4faa21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=817&q=80"
+  },
+  {
+    "name": "Yamaha Helmet",
+    "rate": 4,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "8000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1610900656436-1baa9fbe8d05?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80"
+  },
+  {
+    "name": "Yamaha Thunder Helmet",
+    "rate": 5,
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at quam voluptates quod culpa earum libero veritatis deleniti recusandae velit nobis ut, excepturi blanditiis cumque neque ex eaque, optio non.",
+    "price": "6000",
+    "country": "United States",
+    "image": "https://images.unsplash.com/photo-1603743138526-d3bf32966c8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
+  }
+]

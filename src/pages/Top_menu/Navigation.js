@@ -11,7 +11,21 @@ import Logout from "@mui/icons-material/Logout";
 import logo from "../../images/logo.png";
 import { Divider } from "@mui/material";
 import useFirebase from "./../../firebase/useFirebase/useFirebase";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import ReviewsIcon from "@mui/icons-material/Reviews";
+import { Link } from "react-router-dom";
+import PaymentIcon from "@mui/icons-material/Payment";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import MailIcon from "@mui/icons-material/Mail";
 const Navigation = () => {
+  const { logOut, user } = useFirebase();
+  console.log(user);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -20,34 +34,38 @@ const Navigation = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const { logOut, user } = useFirebase();
+  // dashboard darwer
+
+  // end drawer
   return (
     <Box>
-      <MuiNavbar logo={logo}>
+      <MuiNavbar style={{ color: "red" }} logo={logo}>
         <NavItem to="/">Home</NavItem>
         <NavItem to="/about">About</NavItem>
         <NavItem to="/services">Services</NavItem>
         <NavItem to="/Blog">Blog</NavItem>
         <NavItem to="/contact">Contact</NavItem>
         <NavItem to="/login">Login</NavItem>
-        <Box sx={{ display: "inline" }}>
-          <Tooltip title="Account settings">
-            <IconButton onClick={handleClick} size="small" sx={{}}>
-              <Avatar sx={{ padding: "5px" }}>
-                <img
-                  style={{
-                    borderRadius: "50%",
-                    height: "70px",
-                    width: "70px",
-                    marginTop: "15px",
-                  }}
-                  src={user?.photoURL}
-                ></img>
-                {/* {user?.photoURL} */}
-              </Avatar>
-            </IconButton>
-          </Tooltip>
-        </Box>
+
+        {user?.email && (
+          <Box style={{ display: "inline" }}>
+            <Tooltip title="My Account">
+              <IconButton onClick={handleClick} size="small" sx={{}}>
+                <Avatar sx={{}}>
+                  <img
+                    style={{
+                      marginTop: "10px",
+                      height: "60px",
+                      width: "60x",
+                      borderRadius: "50%",
+                    }}
+                    src={user?.photoURL}
+                  ></img>
+                </Avatar>
+              </IconButton>
+            </Tooltip>
+          </Box>
+        )}
         <Menu
           anchorEl={anchorEl}
           open={open}
@@ -60,19 +78,17 @@ const Navigation = () => {
               filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
 
               "& .MuiAvatar-root": {
-                width: 32,
-
-                ml: -0.5,
-                mr: 1,
+                // width: 32,
+                // height: 32,
               },
               "&:before": {
                 content: '""',
-                display: " inline",
+                display: "inline",
                 position: "absolute",
-                top: 0,
-                right: 14,
-                width: 10,
-                height: 10,
+                // top: 0,
+                // right: 14,
+                // width: 10,
+                // height: 10,
                 bgcolor: "background.paper",
                 transform: "translateY(-50%) rotate(45deg)",
                 zIndex: 0,
@@ -82,6 +98,48 @@ const Navigation = () => {
           transformOrigin={{ horizontal: "right", vertical: "top" }}
           anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         >
+          <MenuItem>
+            <Avatar /> Profile
+          </MenuItem>
+          {/* <MenuItem>
+          <Avatar /> My account
+        </MenuItem> */}
+          <Divider />
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/dashboard"
+          >
+            <MenuItem>
+              <ListItemIcon>
+                <DashboardIcon fontSize="small" />
+              </ListItemIcon>
+              DashBoard
+            </MenuItem>
+          </Link>
+          <MenuItem>
+            <ListItemIcon>
+              <PaymentIcon fontSize="small" />
+            </ListItemIcon>
+            Payment
+          </MenuItem>
+          <MenuItem>
+            <ListItemIcon>
+              <ShoppingBasketIcon fontSize="small" />
+            </ListItemIcon>
+            My Order
+          </MenuItem>
+
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/Reviews"
+          >
+            <MenuItem>
+              <ListItemIcon>
+                <ReviewsIcon fontSize="small" />
+              </ListItemIcon>
+              Reviews
+            </MenuItem>
+          </Link>
           <MenuItem onClick={logOut}>
             <ListItemIcon>
               <Logout fontSize="small" />
@@ -90,6 +148,7 @@ const Navigation = () => {
           </MenuItem>
         </Menu>
       </MuiNavbar>
+      {/* start dashBoard */}
     </Box>
   );
 };

@@ -5,7 +5,6 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Services from "./pages/services/Services";
 import Contuct from "./pages/contuct/Contuct";
-import TopBanner from "./pages/Top_Banner/TopBanner";
 import BuyNow from "./pages/BuyNow/BuyNow";
 import AllProducts from "./pages/allProducts/AllProducts";
 import Login from "./pages/login/Login";
@@ -13,13 +12,14 @@ import Regester from "./pages/regester/Regester";
 import MyOrder from "./pages/cart/MyOrder/MyOrder";
 import AuthProvider from "./hooks/authprovider/AuthProvider";
 import PrivateRoute from "./privateRoute/PrivateRoute";
+import CoustomerReview from "./pages/reviews/CoustomerReview";
+import DashBoard from "./pages/dashboard/DashBoard";
 function App() {
   return (
     <div>
       <AuthProvider>
         <Router>
           <Navigation />
-          <TopBanner />
 
           <Switch>
             <Route exact path="/">
@@ -34,6 +34,9 @@ function App() {
             <Route exact path="/services">
               <Services></Services>
             </Route>
+            <Route path="/Reviews">
+              <CoustomerReview></CoustomerReview>
+            </Route>
             <Route exact path="/login">
               <Login></Login>
             </Route>
@@ -46,6 +49,9 @@ function App() {
             <Route exact path="/allproducts">
               <AllProducts></AllProducts>
             </Route>
+            <PrivateRoute exact path="/dashboard">
+              <DashBoard></DashBoard>
+            </PrivateRoute>
             <Route exact path="/contact">
               <Contuct></Contuct>
             </Route>

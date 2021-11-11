@@ -7,10 +7,11 @@ const MyOrder = () => {
   const [myorder, setMyorder] = useState([]);
   // const [loader, setLoader] = useState(true);
   //   const email = user?.email;
-  console.log(user.email);
+  // console.log("my order", myorder?.product);
+
   useEffect(() => {
     if (user.email) {
-      fetch(`https://infinite-waters-60535.herokuapp.com/${user.email}`)
+      fetch(`https://infinite-waters-60535.herokuapp.com/myOrder/${user.email}`)
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
@@ -26,6 +27,7 @@ const MyOrder = () => {
     <div>
       <Container>
         <h1>hello order page {myorder?.length}</h1>
+        {myorder?.map((uu) => console.log("hello", uu.product))}
       </Container>
     </div>
   );

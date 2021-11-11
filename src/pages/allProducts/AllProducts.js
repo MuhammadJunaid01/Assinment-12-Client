@@ -10,6 +10,7 @@ import { Button, CardActionArea, CardActions, Container } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import Rating from "@mui/material/Rating";
 import "./allproducts.css";
+import { Link } from "react-router-dom";
 const AllProducts = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [loader, setLoader] = useState(true);
@@ -74,9 +75,14 @@ const AllProducts = () => {
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Add To Cart
-                    </Button>
+                    <Link
+                      style={{ textDecoration: "none" }}
+                      to={`/buynow/${available?._id}`}
+                    >
+                      <Button size="small" color="primary">
+                        Add To Cart
+                      </Button>
+                    </Link>
                   </CardActions>
                 </Card>
               </Grid>
