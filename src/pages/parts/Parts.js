@@ -113,52 +113,47 @@ const Parts = () => {
 
           <div>
             {/* <Button >Open modal</Button> */}
-            {modalDataLoader ? (
-              <Typography style={{ textAlign: "center" }} variant="h1">
-                <CircularProgress />
-              </Typography>
-            ) : (
-              <Box style={{ textAlign: "center" }}>
-                <Modal
-                  open={open}
-                  onClose={handleClose}
-                  aria-labelledby="modal-modal-title"
-                  aria-describedby="modal-modal-description"
-                >
-                  <Box sx={style}>
-                    <Typography
-                      id="modal-modal-title"
-                      variant="h6"
-                      component="h2"
-                    >
-                      {modalData?.name}
+
+            <Box style={{ textAlign: "center" }}>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <Typography
+                    id="modal-modal-title"
+                    variant="h6"
+                    component="h2"
+                  >
+                    {modalData?.name}
+                  </Typography>
+                  <img
+                    className="modalImage"
+                    src={modalData?.image}
+                    alt="modalimage"
+                  ></img>
+                  <br />
+                  <Typography variant="p">{modalData?.info}</Typography>
+                  <Box className="rating-box">
+                    <Typography variant="h6" color="text.secondary">
+                      Price: ${modalData?.price}
                     </Typography>
-                    <img
-                      className="modalImage"
-                      src={modalData?.image}
-                      alt="modalimage"
-                    ></img>
-                    <br />
-                    <Typography variant="p">{modalData?.info}</Typography>
-                    <Box className="rating-box">
-                      <Typography variant="h6" color="text.secondary">
-                        Price: ${modalData?.price}
-                      </Typography>
-                      <Typography variant="p">
-                        <Stack spacing={1}>
-                          <Rating
-                            name="half-rating-read"
-                            defaultValue={modalData?.rate}
-                            precision={0.5}
-                            readOnly
-                          />
-                        </Stack>
-                      </Typography>
-                    </Box>
+                    <Typography variant="p">
+                      <Stack spacing={1}>
+                        <Rating
+                          name="half-rating-read"
+                          defaultValue={modalData?.rate}
+                          precision={0.5}
+                          readOnly
+                        />
+                      </Stack>
+                    </Typography>
                   </Box>
-                </Modal>
-              </Box>
-            )}
+                </Box>
+              </Modal>
+            </Box>
           </div>
         </Box>
       </Container>

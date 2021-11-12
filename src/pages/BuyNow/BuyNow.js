@@ -33,10 +33,33 @@ const BuyNow = () => {
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [loader, setLoader] = useState(true);
+  const [product, setProduct] = useState();
   const { id } = useParams();
   const { user } = useFirebase();
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  const placeOrder = (bike) => {
+    fetch(
+      `https://infinite-waters-60535.herokuapp.com/placeOrder?email=${user.email}`,
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(product, { status: "pending", ...bike }),
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          alert("added successfully!");
+          console.log(data);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   const handleClose = () => setOpen(false);
   const handleAddress = (e) => {
     setAddress(e.target.value);
@@ -53,8 +76,9 @@ const BuyNow = () => {
     phone: phoneNumber,
     email: user.email,
   };
-  const [loader, setLoader] = useState(true);
-  const [product, setProduct] = useState();
+
+  console.log("product", product);
+
   useEffect(() => {
     fetch(`https://infinite-waters-60535.herokuapp.com/products/${id}`)
       .then((res) => res.json())
@@ -71,26 +95,9 @@ const BuyNow = () => {
   }, []);
 
   // console.log("products", product);
-
-  const email = user?.email;
-  const placeOrder = () => {
-    fetch(`https://infinite-waters-60535.herokuapp.com/placeOrder`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(info),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.insertedId) {
-          alert("added successfully!");
-          console.log(data);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  const handleOpen = (email) => {
+    setOpen(true);
+    console.log("daynamic email", email);
   };
   console.log("loader", loader);
   return loader ? (
@@ -142,7 +149,11 @@ const BuyNow = () => {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button onClick={handleOpen} size="small" color="primary">
+                  <Button
+                    onClick={() => handleOpen()}
+                    size="small"
+                    color="primary"
+                  >
                     Add To Cart
                   </Button>
                 </CardActions>
@@ -221,7 +232,7 @@ const BuyNow = () => {
                     </form>
                     <Typography variant="button">
                       <Button
-                        onClick={placeOrder}
+                        onClick={() => placeOrder(product)}
                         style={{
                           backgroundColor: "orange",
                           color: "white",

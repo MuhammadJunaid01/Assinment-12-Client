@@ -18,6 +18,7 @@ import MakeAnAdmin from "./pages/dashboard/makeAnAdmin/MakeAnAdmin";
 import ManageAllOrders from "./pages/manage orders/ManageAllOrders";
 import AddAProduct from "./pages/add aproduct/AddAProduct";
 import ViewDetails from "./pages/viewDetails/ViewDetails";
+import Footer from "./pages/Footer/Footer";
 function App() {
   return (
     <div>
@@ -72,6 +73,7 @@ function App() {
               <ManageAllOrders></ManageAllOrders>
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>

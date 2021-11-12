@@ -1,0 +1,27 @@
+.footerContainer {
+  background-image: url(../../images/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  padding: 40px 0px;
+  color: black;
+}
+.subscribeEmailFeild {
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  width: 72%;
+  outline: none;
+  position: relative;
+}
+.subscibeBtn {
+  position: absolute;
+  right: 30px;
+  padding: 4px;
+}
+.subscibeBtn .emailIcon {
+  border-radius: 25px;
+}
