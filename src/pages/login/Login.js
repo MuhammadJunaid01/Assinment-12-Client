@@ -15,22 +15,29 @@ const Login = () => {
     user,
     setError,
     loginWithEmailAndPass,
+    saveUser,
   } = useAuth();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     loginWithEmailAndPass(data.email, data.password);
-    console.log(data);
+    // console.log(data);
     reset();
   };
   const location = useLocation();
   const history = useHistory();
-  const redirect = location.state?.from || "/home";
+  const redirect = location.state?.from || "/";
   console.log("login user", user);
   const handleGoogleLogin = () => {
     loginWithGoogle()
       .then((result) => {
         const user = result.user;
+        const email = user.email;
+        const displayName = user.displayName;
+        saveUser(user.email, user.displayName, "PUT");
+
+        console.log("user,display name", user, displayName);
         setUser(user);
+
         history.push(redirect);
 
         // ...

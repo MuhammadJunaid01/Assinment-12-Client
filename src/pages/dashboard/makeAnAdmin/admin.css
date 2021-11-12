@@ -1,0 +1,9 @@
+.adminContainer {
+  background-image: url(../../../images/admin.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  height: 400px;
+}

@@ -15,8 +15,9 @@ const Regester = () => {
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    regesterWithEmail(data.email, data.password);
+    regesterWithEmail(data.email, data.password, data.name);
     reset();
+    console.log(data.name);
   };
   // console.log("data regester", regesterData);
 

@@ -8,9 +8,11 @@ import { CardActionArea, Container } from "@mui/material";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import ZoomOutMapIcon from "@mui/icons-material/ZoomOutMap";
 const Parts = () => {
   const [parts, setParts] = useState([]);
   const [loader, setLoader] = useState(true);
+  console.log("parts", parts);
   useEffect(() => {
     fetch("https://infinite-waters-60535.herokuapp.com/parts")
       .then((res) => res.json())
@@ -33,7 +35,7 @@ const Parts = () => {
           <Grid container spacing={2}>
             {parts.map((part) => (
               <Grid key={part?._id} item xs={12} sm={12} md={3}>
-                <Card sx={{ maxWidth: 345 }}>
+                <Card style={{ height: "280px" }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -42,8 +44,12 @@ const Parts = () => {
                       alt="green iguana"
                     />
                     <CardContent>
-                      <Typography gutterBottom variant="h6">
-                        {part?.name}
+                      <Typography variant="h6">{part?.name}</Typography>
+                      {/* <Typography variant="p">
+                        {part?.info.slice(0, 10)}
+                      </Typography> */}
+                      <Typography variant="button">
+                        <ZoomOutMapIcon></ZoomOutMapIcon>
                       </Typography>
                     </CardContent>
                   </CardActionArea>

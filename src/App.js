@@ -14,6 +14,10 @@ import AuthProvider from "./hooks/authprovider/AuthProvider";
 import PrivateRoute from "./privateRoute/PrivateRoute";
 import CoustomerReview from "./pages/reviews/CoustomerReview";
 import DashBoard from "./pages/dashboard/DashBoard";
+import MakeAnAdmin from "./pages/dashboard/makeAnAdmin/MakeAnAdmin";
+import ManageAllOrders from "./pages/manage orders/ManageAllOrders";
+import AddAProduct from "./pages/add aproduct/AddAProduct";
+import ViewDetails from "./pages/viewDetails/ViewDetails";
 function App() {
   return (
     <div>
@@ -31,6 +35,9 @@ function App() {
             <PrivateRoute exact path="/buynow/:id">
               <BuyNow></BuyNow>
             </PrivateRoute>
+            <Route exact path="/purchse/:id">
+              <ViewDetails></ViewDetails>
+            </Route>
             <Route exact path="/services">
               <Services></Services>
             </Route>
@@ -54,6 +61,15 @@ function App() {
             </PrivateRoute>
             <Route exact path="/contact">
               <Contuct></Contuct>
+            </Route>
+            <Route exact path="/makeAdmin">
+              <MakeAnAdmin></MakeAnAdmin>
+            </Route>
+            <Route exact path="/addProduct">
+              <AddAProduct></AddAProduct>
+            </Route>
+            <Route exact path="/manageOrder">
+              <ManageAllOrders></ManageAllOrders>
             </Route>
           </Switch>
         </Router>

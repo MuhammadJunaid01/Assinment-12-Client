@@ -27,7 +27,7 @@ const OurCollection = () => {
   console.log("collection data", collection);
   useEffect(() => {
     fetch(
-      `http://https://infinite-waters-60535.herokuapp.com0/ourCollection?page=${page}&&size=${size}`
+      `https://infinite-waters-60535.herokuapp.com/ourCollection?page=${page}&&size=${size}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -93,7 +93,7 @@ const OurCollection = () => {
                   <CardActions>
                     <Link
                       style={{ textDecoration: "none" }}
-                      to={`/buynow/${available?._id}`}
+                      to={`/purchse/${available?._id}`}
                     >
                       <Button size="small" color="primary">
                         View Details <MoreHorizIcon></MoreHorizIcon>
