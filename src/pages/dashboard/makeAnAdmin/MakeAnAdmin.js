@@ -6,7 +6,7 @@ const MakeAnAdmin = () => {
     const user = { email };
     console.log("user", user);
     // e.preventDefault();
-    fetch("http://localhost:5000/admin", {
+    fetch("https://infinite-waters-60535.herokuapp.com/admin", {
       method: "PUT",
       headers: {
         "Content-type": "application/json",

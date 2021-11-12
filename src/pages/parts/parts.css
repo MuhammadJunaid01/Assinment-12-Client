@@ -1,0 +1,23 @@
+.availablePartsInfo {
+  text-align: center;
+
+  margin: 40px 0px;
+}
+.partsCard {
+  position: relative;
+}
+.partsContainer {
+}
+.partsCard .zoomBtn {
+  position: absolute;
+  bottom: 110px;
+  left: 100px;
+  display: none;
+}
+.partsCard:hover .zoomBtn {
+  display: block;
+}
+.modalImage {
+  width: 300px;
+  height: 250px;
+}

@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import Stack from "@mui/material/Stack";
 
 const Products = () => {
+  // modal
   const [value, setValue] = React.useState(2);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);

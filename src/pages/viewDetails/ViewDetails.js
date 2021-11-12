@@ -19,7 +19,7 @@ const ViewDetails = () => {
   const [loader, setLoader] = useState(true);
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:5000/ourCollection/${id}`)
+    fetch(`https://infinite-waters-60535.herokuapp.com/ourCollection/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setMoreInfo(data);
