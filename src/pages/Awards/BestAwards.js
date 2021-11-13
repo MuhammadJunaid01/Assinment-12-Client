@@ -9,6 +9,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, CircularProgress } from "@mui/material";
+import Fade from "react-reveal/Fade";
 
 const BestAwards = () => {
   const [award, setAward] = useState([]);
@@ -48,29 +49,31 @@ const BestAwards = () => {
                     },
                   }}
                 >
-                  <Card
-                    style={{ boxShadow: " rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
-                    className="award-Box"
-                  >
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={award.image}
-                        alt="green iguana"
-                      />
-                      <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                          {award.name}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Lizards are a widespread group of squamate reptiles,
-                          with over 6,000 species, ranging across all continents
-                          except Antarctica
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
+                  <Fade left>
+                    <Card
+                      style={{ boxShadow: " rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+                      className="award-Box"
+                    >
+                      <CardActionArea>
+                        <CardMedia
+                          component="img"
+                          height="140"
+                          image={award.image}
+                          alt="green iguana"
+                        />
+                        <CardContent>
+                          <Typography gutterBottom variant="h5" component="div">
+                            {award.name}
+                          </Typography>
+                          <Typography variant="body2" color="text.secondary">
+                            Lizards are a widespread group of squamate reptiles,
+                            with over 6,000 species, ranging across all
+                            continents except Antarctica
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Fade>
                 </Box>
               </Grid>
             ))}

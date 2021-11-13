@@ -13,6 +13,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Rating from "@mui/material/Rating";
 import { Link } from "react-router-dom";
 import Stack from "@mui/material/Stack";
+import Rotate from "react-reveal/Rotate";
 
 const Products = () => {
   // modal
@@ -47,46 +48,48 @@ const Products = () => {
         <Grid container spacing={2}>
           {products?.map((product, index) => (
             <Grid key={index} item xs={12} md={4} sm={12}>
-              <Card className="products-card" sx={{ maxWidth: 345 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={product.image}
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {product?.name}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {product?.info}
-                    </Typography>
-                    <Box className="rating-box">
-                      <Typography variant="h6" color="text.secondary">
-                        Price: ${product?.price}
+              <Rotate top left>
+                <Card className="products-card" sx={{ maxWidth: 345 }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={product.image}
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        {product?.name}
                       </Typography>
-                      <Typography variant="p">
-                        <Stack spacing={1}>
-                          <Rating
-                            name="half-rating-read"
-                            defaultValue={product?.rate}
-                            precision={0.5}
-                            readOnly
-                          />
-                        </Stack>
+                      <Typography variant="body2" color="text.secondary">
+                        {product?.info}
                       </Typography>
-                    </Box>
+                      <Box className="rating-box">
+                        <Typography variant="h6" color="text.secondary">
+                          Price: ${product?.price}
+                        </Typography>
+                        <Typography variant="p">
+                          <Stack spacing={1}>
+                            <Rating
+                              name="half-rating-read"
+                              defaultValue={product?.rate}
+                              precision={0.5}
+                              readOnly
+                            />
+                          </Stack>
+                        </Typography>
+                      </Box>
 
-                    <Link to={`/buynow/${product._id}`}>
-                      <Typography className="searche-btn" variant="button">
-                        Buy Now
-                        <ShoppingCartIcon className="searche-icon"></ShoppingCartIcon>
-                      </Typography>
-                    </Link>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
+                      <Link to={`/buynow/${product._id}`}>
+                        <Typography className="searche-btn" variant="button">
+                          Buy Now
+                          <ShoppingCartIcon className="searche-icon"></ShoppingCartIcon>
+                        </Typography>
+                      </Link>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Rotate>
             </Grid>
           ))}
         </Grid>

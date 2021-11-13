@@ -1,0 +1,8 @@
+.pamentContainer {
+  background-image: url(../../images/pament-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 400px;
+}

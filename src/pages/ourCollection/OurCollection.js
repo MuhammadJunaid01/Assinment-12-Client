@@ -16,7 +16,7 @@ import CardActionArea from "@mui/material/CardActionArea";
 import Stack from "@mui/material/Stack";
 import Rating from "@mui/material/Rating";
 import { Link } from "react-router-dom";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import Fade from "react-reveal/Fade";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 const OurCollection = () => {
   const [collection, setCollection] = useState([]);
@@ -58,49 +58,51 @@ const OurCollection = () => {
           <Grid container spacing={2}>
             {collection?.map((available) => (
               <Grid key={available?._id} item xs={12} sm={12} md={3} lg={3}>
-                <Card style={{ height: "440px" }}>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image={available?.image}
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5">
-                        {available?.name}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {available?.info}
-                      </Typography>
-                      <Box className="allproductsrating-box">
-                        <Typography variant="p" color="text.secondary">
-                          Price: ${available?.price}
+                <Fade left>
+                  <Card style={{ height: "440px" }}>
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="140"
+                        image={available?.image}
+                        alt="green iguana"
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5">
+                          {available?.name}
                         </Typography>
-                        <Typography variant="p">
-                          <Stack spacing={1}>
-                            <Rating
-                              name="half-rating-read"
-                              defaultValue={available?.rate}
-                              precision={0.5}
-                              readOnly
-                            />
-                          </Stack>
+                        <Typography variant="body2" color="text.secondary">
+                          {available?.info}
                         </Typography>
-                      </Box>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Link
-                      style={{ textDecoration: "none" }}
-                      to={`/purchse/${available?._id}`}
-                    >
-                      <Button size="small" color="primary">
-                        View Details <MoreHorizIcon></MoreHorizIcon>
-                      </Button>
-                    </Link>
-                  </CardActions>
-                </Card>
+                        <Box className="allproductsrating-box">
+                          <Typography variant="p" color="text.secondary">
+                            Price: ${available?.price}
+                          </Typography>
+                          <Typography variant="p">
+                            <Stack spacing={1}>
+                              <Rating
+                                name="half-rating-read"
+                                defaultValue={available?.rate}
+                                precision={0.5}
+                                readOnly
+                              />
+                            </Stack>
+                          </Typography>
+                        </Box>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <Link
+                        style={{ textDecoration: "none" }}
+                        to={`/purchse/${available?._id}`}
+                      >
+                        <Button size="small" color="primary">
+                          View Details <MoreHorizIcon></MoreHorizIcon>
+                        </Button>
+                      </Link>
+                    </CardActions>
+                  </Card>
+                </Fade>
               </Grid>
             ))}
           </Grid>

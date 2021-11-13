@@ -1,4 +1,3 @@
-import { RssFeed } from "@mui/icons-material";
 import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -6,6 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Rating from "@mui/material/Rating";
+import Slide from "react-reveal/Slide";
 
 import {
   Button,
@@ -82,31 +82,33 @@ const Parts = () => {
           <Grid container spacing={2}>
             {parts.map((part) => (
               <Grid key={part?._id} item xs={12} sm={12} md={3}>
-                <Card className="partsCard">
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image={part?.image}
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      <Typography variant="h6">
-                        {part?.name.slice(0, 20)}
-                      </Typography>
-                      {/* <Typography variant="p">
+                <Slide top>
+                  <Card className="partsCard">
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="140"
+                        image={part?.image}
+                        alt="green iguana"
+                      />
+                      <CardContent>
+                        <Typography variant="h6">
+                          {part?.name.slice(0, 20)}
+                        </Typography>
+                        {/* <Typography variant="p">
                         {part?.info.slice(0, 10)}
                       </Typography> */}
-                      <Button
-                        onClick={() => handleModalOpen(part?._id)}
-                        className="zoomBtn"
-                        variant="outlined"
-                      >
-                        <ZoomOutMapIcon></ZoomOutMapIcon>
-                      </Button>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
+                        <Button
+                          onClick={() => handleModalOpen(part?._id)}
+                          className="zoomBtn"
+                          variant="outlined"
+                        >
+                          <ZoomOutMapIcon></ZoomOutMapIcon>
+                        </Button>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                </Slide>
               </Grid>
             ))}
           </Grid>

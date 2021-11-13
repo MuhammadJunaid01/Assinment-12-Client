@@ -16,13 +16,6 @@ import ReviewsIcon from "@mui/icons-material/Reviews";
 import { Link } from "react-router-dom";
 import PaymentIcon from "@mui/icons-material/Payment";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 const Navigation = () => {
   const { logOut, user } = useFirebase();
   console.log(user);
@@ -60,6 +53,7 @@ const Navigation = () => {
                       borderRadius: "50%",
                     }}
                     src={user?.photoURL}
+                    alt="userPhoto"
                   ></img>
                 </Avatar>
               </IconButton>
@@ -116,12 +110,14 @@ const Navigation = () => {
               DashBoard
             </MenuItem>
           </Link>
-          <MenuItem>
-            <ListItemIcon>
-              <PaymentIcon fontSize="small" />
-            </ListItemIcon>
-            Payment
-          </MenuItem>
+          <Link style={{ textDecoration: "none", color: "black" }} to="pament">
+            <MenuItem>
+              <ListItemIcon>
+                <PaymentIcon fontSize="small" />
+              </ListItemIcon>
+              Payment
+            </MenuItem>
+          </Link>
           <MenuItem>
             <ListItemIcon>
               <ShoppingBasketIcon fontSize="small" />

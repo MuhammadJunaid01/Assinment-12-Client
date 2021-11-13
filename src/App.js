@@ -19,6 +19,7 @@ import ManageAllOrders from "./pages/manage orders/ManageAllOrders";
 import AddAProduct from "./pages/add aproduct/AddAProduct";
 import ViewDetails from "./pages/viewDetails/ViewDetails";
 import Footer from "./pages/Footer/Footer";
+import PamentGetWay from "./pages/pament/PamentGetWay";
 function App() {
   return (
     <div>
@@ -62,6 +63,9 @@ function App() {
             </PrivateRoute>
             <Route exact path="/contact">
               <Contuct></Contuct>
+            </Route>
+            <Route exact path="/pament">
+              <PamentGetWay></PamentGetWay>
             </Route>
             <Route exact path="/makeAdmin">
               <MakeAnAdmin></MakeAnAdmin>
