@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Award.css";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/system/Box";
@@ -8,34 +8,36 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
-const awards = [
-  {
-    name: "Pro Team",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnzdkmjIQ12S3cG8O4CHo2RTIo53Mp4FXDIw&usqp=CAU",
-    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae expedita minima odit cupiditate libero minus sequi voluptate dolores aperiam nobis.",
-  },
-  {
-    name: "Best Awards",
-    image:
-      "https://png.pngitem.com/pimgs/s/23-233880_gold-award-ribbon-png-transparent-png.png",
-    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae expedita minima odit cupiditate libero minus sequi voluptate dolores aperiam nobis.",
-  },
-  {
-    name: "Best Design",
-    image:
-      "https://image.shutterstock.com/image-vector/brush-on-computer-icon-vector-260nw-1692671215.jpg",
-    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae expedita minima odit cupiditate libero minus sequi voluptate dolores aperiam nobis.",
-  },
-];
+import { CardActionArea, CircularProgress } from "@mui/material";
+
 const BestAwards = () => {
-  return (
+  const [award, setAward] = useState([]);
+  const [loader, setLoader] = useState(true);
+
+  useEffect(() => {
+    fetch("https://infinite-waters-60535.herokuapp.com/award")
+      .then((res) => res.json())
+      .then((data) => {
+        setAward(data);
+        // setCollection(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }, []);
+  return loader ? (
+    <Typography style={{ textAlign: "center", fontSize: "80px" }} variant="h1">
+      <CircularProgress />
+    </Typography>
+  ) : (
     <Box className="award-container">
       <Container>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
-            {awards.map((award, index) => (
+            {award.map((award, index) => (
               <Grid item key={index} xs={12} md={4} sm={12} lg={4}>
                 <Box
                   sx={{
@@ -46,7 +48,10 @@ const BestAwards = () => {
                     },
                   }}
                 >
-                  <Card className="award-Box">
+                  <Card
+                    style={{ boxShadow: " rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+                    className="award-Box"
+                  >
                     <CardActionArea>
                       <CardMedia
                         component="img"

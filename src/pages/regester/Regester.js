@@ -9,13 +9,18 @@ import { Link } from "react-router-dom";
 import AlertTitle from "@mui/material/AlertTitle";
 import Stack from "@mui/material/Stack";
 import Alert from "@mui/material/Alert";
+import { useLocation } from "react-router";
+import { useHistory } from "react-router";
 
 const Regester = () => {
   const { regesterWithEmail, error } = useFirebase();
-
+  const location = useLocation();
+  const history = useHistory();
+  const redirect = location.state?.from || "/";
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     regesterWithEmail(data.email, data.password, data.name);
+    history.push(redirect);
     reset();
     console.log(data.name);
   };

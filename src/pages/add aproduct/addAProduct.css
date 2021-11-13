@@ -1,0 +1,17 @@
+.addProductContainer {
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+}
+.addProductContainer h1 {
+  text-align: center;
+}
+.addProductInput {
+  display: block;
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.addProductInputButton {
+  padding: 5px 20px;
+}

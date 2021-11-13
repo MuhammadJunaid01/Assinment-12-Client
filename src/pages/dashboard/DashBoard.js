@@ -8,18 +8,18 @@ const DashBoard = () => {
   return (
     <div className="dashBoardContainer" style={{ marginTop: "20px" }}>
       <MuiNavbar style={{ display: "flex", alignItems: "center" }}>
-        <Box>
+        <>
           <NavItem to="/Reviews">Review</NavItem>
           <NavItem to="/Blog">Blog</NavItem>
           <NavItem to="/contact">Contact</NavItem>
           <NavItem to="/myorder">My Order</NavItem>
-        </Box>
+        </>
         {admin && (
-          <Box style={{ display: "flex" }}>
+          <>
             <NavItem to="/makeAdmin">Make An Admin</NavItem>
-            <NavItem to="/manageOrder">Manage All Order</NavItem>
+            <NavItem to="/manageOrder">Manage All Products</NavItem>
             <NavItem to="/addProduct">Add A Product</NavItem>
-          </Box>
+          </>
         )}
       </MuiNavbar>
     </div>

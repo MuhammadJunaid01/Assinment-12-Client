@@ -17,15 +17,17 @@ const Login = () => {
     loginWithEmailAndPass,
     saveUser,
   } = useAuth();
+  const location = useLocation();
+  const history = useHistory();
+  const redirect = location.state?.from || "/";
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     loginWithEmailAndPass(data.email, data.password);
     // console.log(data);
+    history.push(redirect);
     reset();
   };
-  const location = useLocation();
-  const history = useHistory();
-  const redirect = location.state?.from || "/";
+
   console.log("login user", user);
   const handleGoogleLogin = () => {
     loginWithGoogle()

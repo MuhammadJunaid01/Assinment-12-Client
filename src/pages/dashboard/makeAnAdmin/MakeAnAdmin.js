@@ -28,11 +28,18 @@ const MakeAnAdmin = () => {
       <h1>make an admin</h1>
       <form>
         <input
+          style={{ padding: "8px", width: "30%", borderRadius: "15px" }}
           onBlur={handleEmail}
+          required
           type="email"
           placeholder="Enter Your Email:"
         />
-        <input onClick={handleMakeAdmin} type="button" value="Submit" />
+        <input
+          style={{ padding: "8px" }}
+          onClick={handleMakeAdmin}
+          type="button"
+          value="Submit"
+        />
       </form>
     </div>
   );
