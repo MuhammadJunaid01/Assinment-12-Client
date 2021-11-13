@@ -20,6 +20,7 @@ import AddAProduct from "./pages/add aproduct/AddAProduct";
 import ViewDetails from "./pages/viewDetails/ViewDetails";
 import Footer from "./pages/Footer/Footer";
 import PamentGetWay from "./pages/pament/PamentGetWay";
+import NotFound from "./pages/notFound/NotFound";
 function App() {
   return (
     <div>
@@ -75,6 +76,9 @@ function App() {
             </Route>
             <Route exact path="/manageOrder">
               <ManageAllOrders></ManageAllOrders>
+            </Route>
+            <Route exact path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>
