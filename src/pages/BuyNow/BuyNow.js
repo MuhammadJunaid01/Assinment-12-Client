@@ -18,7 +18,8 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import TextField from "@mui/material/TextField";
 import useFirebase from "./../../firebase/useFirebase/useFirebase";
-
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 const style = {
   position: "absolute",
   top: "59%",
@@ -39,6 +40,23 @@ const BuyNow = () => {
   const { user } = useFirebase();
   const [open, setOpen] = React.useState(false);
   const placeOrder = (bike) => {
+    const MySwal = withReactContent(Swal);
+    const addedSuccess = () => {
+      Swal.fire({
+        title: "Do you want to save the changes?",
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: "Save",
+        denyButtonText: `Don't save`,
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          Swal.fire("Saved!", "", "success");
+        } else if (result.isDenied) {
+          Swal.fire("Changes are not saved", "", "info");
+        }
+      });
+    };
     fetch(
       `https://infinite-waters-60535.herokuapp.com/placeOrder?email=${user.email}`,
       {
@@ -52,7 +70,8 @@ const BuyNow = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          alert("added successfully!");
+          // alert("added successfully!");
+          addedSuccess();
           console.log(data);
         }
       })

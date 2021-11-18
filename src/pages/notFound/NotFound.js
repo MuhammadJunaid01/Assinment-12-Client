@@ -1,5 +1,6 @@
 import React from "react";
 import notfound from "../../images/notFound.jpg";
+
 const NotFound = () => {
   return (
     <div>

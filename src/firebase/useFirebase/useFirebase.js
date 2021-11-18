@@ -11,9 +11,17 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { Alert, AlertTitle } from "@mui/material";
-
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 const useFirebase = () => {
+  const MySwal = withReactContent(Swal);
+  const LogoutSuccesfull = () => {
+    MySwal.fire({
+      title: <strong>You successfully Logout!</strong>,
+      html: <i>You clicked the button!</i>,
+      icon: "success",
+    });
+  };
   firebaseAuthentication();
   const googleProvider = new GoogleAuthProvider();
   const auth = getAuth();
@@ -43,7 +51,8 @@ const useFirebase = () => {
   const logOut = () => {
     signOut(auth)
       .then(() => {
-        alert("You are successfully Logout!  ");
+        // alert("You are successfully Logout!  ");
+        LogoutSuccesfull();
         setUser({});
       })
       .catch((error) => {

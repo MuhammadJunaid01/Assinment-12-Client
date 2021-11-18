@@ -7,6 +7,7 @@ import "./login.css";
 import { Link } from "react-router-dom";
 import useAuth from "./../../hooks/useAuth/useAuth";
 import { useHistory, useLocation } from "react-router";
+
 const Login = () => {
   const {
     loginWithGoogle,
@@ -17,6 +18,7 @@ const Login = () => {
     loginWithEmailAndPass,
     saveUser,
   } = useAuth();
+
   const location = useLocation();
   const history = useHistory();
   const redirect = location.state?.from || "/";
@@ -41,7 +43,6 @@ const Login = () => {
         setUser(user);
 
         history.push(redirect);
-
         // ...
       })
       .catch((error) => {
