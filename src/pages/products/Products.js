@@ -48,48 +48,46 @@ const Products = () => {
         <Grid container spacing={2}>
           {products?.map((product, index) => (
             <Grid key={index} item xs={12} md={4} sm={12}>
-              <Rotate top left>
-                <Card className="products-card" sx={{ maxWidth: 345 }}>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image={product.image}
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        {product?.name}
+              <Box className="products-card">
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image={product.image}
+                    alt="green iguana"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {product?.name}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {product?.info}
+                    </Typography>
+                    <Box className="rating-box">
+                      <Typography variant="h6" color="text.secondary">
+                        Price: ${product?.price}
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {product?.info}
+                      <Typography variant="p">
+                        <Stack spacing={1}>
+                          <Rating
+                            name="half-rating-read"
+                            defaultValue={product?.rate}
+                            precision={0.5}
+                            readOnly
+                          />
+                        </Stack>
                       </Typography>
-                      <Box className="rating-box">
-                        <Typography variant="h6" color="text.secondary">
-                          Price: ${product?.price}
-                        </Typography>
-                        <Typography variant="p">
-                          <Stack spacing={1}>
-                            <Rating
-                              name="half-rating-read"
-                              defaultValue={product?.rate}
-                              precision={0.5}
-                              readOnly
-                            />
-                          </Stack>
-                        </Typography>
-                      </Box>
+                    </Box>
 
-                      <Link to={`/buynow/${product._id}`}>
-                        <Typography className="searche-btn" variant="button">
-                          Buy Now
-                          <ShoppingCartIcon className="searche-icon"></ShoppingCartIcon>
-                        </Typography>
-                      </Link>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Rotate>
+                    <Link to={`/buynow/${product._id}`}>
+                      <Typography className="searche-btn" variant="button">
+                        Buy Now
+                        <ShoppingCartIcon className="searche-icon"></ShoppingCartIcon>
+                      </Typography>
+                    </Link>
+                  </CardContent>
+                </CardActionArea>
+              </Box>
             </Grid>
           ))}
         </Grid>

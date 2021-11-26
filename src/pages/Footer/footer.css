@@ -9,18 +9,24 @@
   padding: 40px 0px;
   color: black;
 }
+.subsCribeForm {
+  position: relative;
+}
 .subscribeEmailFeild {
   padding: 15px;
   border: none;
   border-radius: 25px;
   width: 72%;
   outline: none;
-  position: relative;
 }
 .subscibeBtn {
   position: absolute;
-  right: 30px;
-  padding: 4px;
+  right: 82px;
+  top: 7px;
+  padding: 8px;
+  border-radius: 50px;
+  border: none;
+  background-image: linear-gradient(to left, orange, tomato);
 }
 .subscibeBtn .emailIcon {
   border-radius: 25px;

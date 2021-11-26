@@ -44,51 +44,49 @@ const AllProducts = () => {
           <Grid container spacing={2}>
             {allProducts?.map((available) => (
               <Grid key={available?._id} item xs={12} sm={12} md={3}>
-                <Fade left>
-                  <Card style={{ height: "440px" }}>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={available?.image}
-                        alt="green iguana"
-                      />
-                      <CardContent>
-                        <Typography gutterBottom variant="h5">
-                          {available?.name}
+                <Card style={{ height: "440px" }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={available?.image}
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5">
+                        {available?.name}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {available?.info}
+                      </Typography>
+                      <Box className="allproductsrating-box">
+                        <Typography variant="p" color="text.secondary">
+                          Price: ${available?.price}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          {available?.info}
+                        <Typography variant="p">
+                          <Stack spacing={1}>
+                            <Rating
+                              name="half-rating-read"
+                              defaultValue={available?.rate}
+                              precision={0.5}
+                              readOnly
+                            />
+                          </Stack>
                         </Typography>
-                        <Box className="allproductsrating-box">
-                          <Typography variant="p" color="text.secondary">
-                            Price: ${available?.price}
-                          </Typography>
-                          <Typography variant="p">
-                            <Stack spacing={1}>
-                              <Rating
-                                name="half-rating-read"
-                                defaultValue={available?.rate}
-                                precision={0.5}
-                                readOnly
-                              />
-                            </Stack>
-                          </Typography>
-                        </Box>
-                      </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                      <Link
-                        style={{ textDecoration: "none" }}
-                        to={`/buynow/${available?._id}`}
-                      >
-                        <Button size="small" color="primary">
-                          Add To Cart
-                        </Button>
-                      </Link>
-                    </CardActions>
-                  </Card>
-                </Fade>
+                      </Box>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Link
+                      style={{ textDecoration: "none" }}
+                      to={`/buynow/${available?._id}`}
+                    >
+                      <Button size="small" color="primary">
+                        Add To Cart
+                      </Button>
+                    </Link>
+                  </CardActions>
+                </Card>
               </Grid>
             ))}
           </Grid>

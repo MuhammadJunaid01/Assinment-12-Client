@@ -21,6 +21,9 @@
   border: 2px solid white;
   padding: 5px;
 }
+.products-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
 .products-card:hover .searche-btn {
   display: block;
 }

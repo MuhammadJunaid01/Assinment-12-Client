@@ -44,15 +44,13 @@ const Footer = () => {
                 <p>
                   here are many variations of passages of Lorem Ipsum available
                 </p>
-                <form action="">
+                <form className="subsCribeForm">
                   <input
                     className="subscribeEmailFeild"
                     type="email"
                     placeholder="Your Email Address:"
                   />
-                  <Button className="subscibeBtn" variant="outlined">
-                    <EmailIcon className="emailIcon"></EmailIcon>
-                  </Button>
+                  <button className="subscibeBtn">Subscribe</button>
                 </form>
               </Box>
             </Grid>
